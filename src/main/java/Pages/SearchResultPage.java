@@ -24,7 +24,7 @@ public class SearchResultPage extends TestBase
 
     public void identifyLink(String filter)
     {
-        List <WebElement> urlList = driver.findElements(By.cssSelector(dataFactory.getProperty("urlLinks")+filter+"]"));
+        List <WebElement> urlList = driver.findElements(By.cssSelector(dataFactory.getProperty("searchResultPageUrlLink")+filter+"]"));
 
         for(int i = 0 ; i <urlList.size(); i++)
         {
@@ -82,7 +82,7 @@ public class SearchResultPage extends TestBase
                         title = true;
                         softAssert.assertTrue(title, "Page is not having any title");
                     }
-                    totalCountHavingText = this.driver.findElement(By.cssSelector("h1.h1-responsive")).getText();
+                    totalCountHavingText = this.driver.findElement(By.cssSelector(dataFactory.getProperty("countText"))).getText();
                     totalPrdCountWithOutComma = commonMethod.getNumberExtractFromText(totalCountHavingText);
 
                     if(totalPrdCountWithOutComma > 0)
