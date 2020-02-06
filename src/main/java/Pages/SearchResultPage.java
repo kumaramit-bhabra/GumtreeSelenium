@@ -19,7 +19,7 @@ public class SearchResultPage extends TestBase
 
     public void validateSearchResultWindowTitle()
     {
-        //This will open the URL's in new window
+        driver.getTitle();
     }
 
     public void identifyLink(String filter)

@@ -1,0 +1,26 @@
+Positive Test Cases
+Pre-reqs: User enters the date in correct format (dd/mm/yyyy)
+1. Should display age as 6 months if entered date is in past (six months from current date)
+2. Should display age as 1 year if entered date is in past (1 year from current date)
+3. Should display age as 99 year if entered date is in past (99 year from current date)
+4. Should display age as 999 year if entered date is in past (999 year from current date)
+
+Negative Test Cases
+Pre-reqs: User enters the data in wrong format or invalid data
+1. Should display an message if the user presses the button without entering any data
+2. Should display an message if the user presses the button by entering invalid set of the data. Please run this test case with
+   below set of data
+        . 12345678
+        . abcdefgh
+        . abc123def
+        . 01/99/
+        . 01/
+        . /12/2018
+        . 32/01/2018
+        . 30/02/2018
+        . 01/13/2018
+        . 01/12/2099 (future date)
+        . Entering the date as today's date (let's see how the system behaves)
+
+ Boundary Value
+ 1. Enter the date with max number of digits and see how the system responds
